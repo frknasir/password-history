@@ -1,6 +1,6 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory\Database\Factories;
+namespace StarfolkSoftware\PasswordHistory\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 

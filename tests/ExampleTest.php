@@ -1,6 +1,6 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory\Tests;
+namespace StarfolkSoftware\PasswordHistory\Tests;
 
 class ExampleTest extends TestCase
 {

@@ -1,38 +1,30 @@
 # Add password history to your laravel applications
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/starfolksoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/starfolksoftware/password-history)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/starfolksoftware/password-history/run-tests?label=tests)](https://github.com/starfolksoftware/password-history/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/starfolksoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/starfolksoftware/password-history)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/StarfolkSoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/StarfolkSoftware/password-history)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/StarfolkSoftware/password-history/run-tests?label=tests)](https://github.com/StarfolkSoftware/password-history/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/StarfolkSoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/StarfolkSoftware/password-history)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-password-history-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-password-history-laravel)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+Add password history to your laravel applications
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require starfolksoftware/password-history
+composer require StarfolkSoftware/password-history
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Starfolksoftware\PasswordHistory\PasswordHistoryServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="StarfolkSoftware\PasswordHistory\PasswordHistoryServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Starfolksoftware\PasswordHistory\PasswordHistoryServiceProvider" --tag="config"
+php artisan vendor:publish --provider="StarfolkSoftware\PasswordHistory\PasswordHistoryServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
@@ -45,8 +37,8 @@ return [
 ## Usage
 
 ``` php
-$password-history = new Starfolksoftware\PasswordHistory();
-echo $password-history->echoPhrase('Hello, Starfolksoftware!');
+$password-history = new StarfolkSoftware\PasswordHistory();
+echo $password-history->echoPhrase('Hello, StarfolkSoftware!');
 ```
 
 ## Testing

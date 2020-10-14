@@ -1,9 +1,9 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory;
+namespace StarfolkSoftware\PasswordHistory;
 
 use Illuminate\Support\ServiceProvider;
-use Starfolksoftware\PasswordHistory\Commands\PasswordHistoryCommand;
+use StarfolkSoftware\PasswordHistory\Commands\PasswordHistoryCommand;
 
 class PasswordHistoryServiceProvider extends ServiceProvider
 {

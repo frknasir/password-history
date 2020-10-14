@@ -1,16 +1,16 @@
 {
-    "name": "starfolksoftware/password-history",
+    "name": "StarfolkSoftware/password-history",
     "description": "Add password history to your laravel applications",
     "keywords": [
-        "starfolksoftware",
+        "StarfolkSoftware",
         "password-history"
     ],
-    "homepage": "https://github.com/starfolksoftware/password-history",
+    "homepage": "https://github.com/StarfolkSoftware/password-history",
     "license": "MIT",
     "authors": [
         {
             "name": "Faruk Nasir",
-            "email": "faruk@starfolksoftware.com",
+            "email": "faruk@StarfolkSoftware.com",
             "homepage": "https://spatie.be",
             "role": "Developer"
         }
@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Starfolksoftware\\PasswordHistory\\": "src",
-            "Starfolksoftware\\PasswordHistory\\Database\\Factories\\": "database/factories"
+            "StarfolkSoftware\\PasswordHistory\\": "src",
+            "StarfolkSoftware\\PasswordHistory\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Starfolksoftware\\PasswordHistory\\Tests\\": "tests"
+            "StarfolkSoftware\\PasswordHistory\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Starfolksoftware\\PasswordHistory\\PasswordHistoryServiceProvider"
+                "StarfolkSoftware\\PasswordHistory\\PasswordHistoryServiceProvider"
             ],
             "aliases": {
-                "PasswordHistory": "Starfolksoftware\\PasswordHistory\\PasswordHistoryFacade"
+                "PasswordHistory": "StarfolkSoftware\\PasswordHistory\\PasswordHistoryFacade"
             }
         }
     },

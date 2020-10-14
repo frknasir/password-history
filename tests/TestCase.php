@@ -1,10 +1,10 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory\Tests;
+namespace StarfolkSoftware\PasswordHistory\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Starfolksoftware\PasswordHistory\PasswordHistoryServiceProvider;
+use StarfolkSoftware\PasswordHistory\PasswordHistoryServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Starfolksoftware\\PasswordHistory\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'StarfolkSoftware\\PasswordHistory\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory\Commands;
+namespace StarfolkSoftware\PasswordHistory\Commands;
 
 use Illuminate\Console\Command;
 

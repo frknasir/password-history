@@ -1,6 +1,6 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory;
+namespace StarfolkSoftware\PasswordHistory;
 
 class PasswordHistory
 {

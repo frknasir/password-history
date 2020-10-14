@@ -1,11 +1,11 @@
 <?php
 
-namespace Starfolksoftware\PasswordHistory;
+namespace StarfolkSoftware\PasswordHistory;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Starfolksoftware\PasswordHistory\PasswordHistory
+ * @see \StarfolkSoftware\PasswordHistory\PasswordHistory
  */
 class PasswordHistoryFacade extends Facade
 {
