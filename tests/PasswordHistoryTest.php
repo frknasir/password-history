@@ -2,10 +2,11 @@
 
 namespace StarfolkSoftware\PasswordHistory\Tests;
 
-use StarfolkSoftware\PasswordHistory\Tests\Models\{SampleUser, AdminUser};
+use Illuminate\Support\Facades\Hash;
 use StarfolkSoftware\PasswordHistory\PasswordHistory;
 use StarfolkSoftware\PasswordHistory\Rules\NotInRecentPasswordHistory;
-use Illuminate\Support\Facades\Hash;
+use StarfolkSoftware\PasswordHistory\Tests\Models\AdminUser;
+use StarfolkSoftware\PasswordHistory\Tests\Models\SampleUser;
 
 class PasswordHistoryTest extends TestCase
 {
@@ -16,7 +17,7 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir1@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         auth()->login($user);
@@ -35,7 +36,7 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Nasir Faruk',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         auth()->login($user2);
@@ -58,7 +59,7 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $this->assertSame(
@@ -77,12 +78,13 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
-    public function password_history_has_historian() {
+    public function password_history_has_historian()
+    {
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         auth()->login($user);
@@ -97,12 +99,13 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
-    public function password_history_has_model() {
+    public function password_history_has_model()
+    {
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $passwordHistory = PasswordHistory::find(1);
@@ -121,7 +124,7 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $user = SampleUser::find(1);
@@ -143,7 +146,7 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password1')
+            'password' => Hash::make('password1'),
         ]);
 
         $user = SampleUser::find(1);
@@ -191,14 +194,14 @@ class PasswordHistoryTest extends TestCase
             'id' => 1,
             'name' => 'Faruk Nasir',
             'email' => 'frknasir1@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $user2 = AdminUser::create([
             'id' => 2,
             'name' => 'Nasir Faruk',
             'email' => 'frknasir@example.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
         ]);
 
         $this->assertSame(
