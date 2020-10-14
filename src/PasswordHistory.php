@@ -12,7 +12,7 @@ class PasswordHistory extends Model implements PasswordHistoryContract {
      *
      * @var string
      */
-    protected $table = 'views';
+    protected $table = 'password_histories';
 
     protected $fillable = ['user_id','password', 'guard'];
 

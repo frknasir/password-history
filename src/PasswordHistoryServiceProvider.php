@@ -11,7 +11,7 @@ class PasswordHistoryServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/password_history.php' => config_path('password-history.php'),
+                __DIR__ . '/../config/password_history.php' => config_path('password_history.php'),
             ], 'config');
 
             $this->publishes([
@@ -35,7 +35,7 @@ class PasswordHistoryServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/password_history.php', 'password-history');
+        $this->mergeConfigFrom(__DIR__ . '/../config/password_history.php', 'password_history');
     }
 
     public static function migrationFileExists(string $migrationFileName): bool

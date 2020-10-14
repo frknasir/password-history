@@ -8,4 +8,10 @@ class SampleUser extends User {
     use HasPasswordHistory;
     
     protected $table = 'users';
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password'
+    ];
 }
