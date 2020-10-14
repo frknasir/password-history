@@ -3,11 +3,10 @@
 namespace StarfolkSoftware\PasswordHistory;
 
 use Illuminate\Support\ServiceProvider;
-use StarfolkSoftware\PasswordHistory\Commands\PasswordHistoryCommand;
 
 class PasswordHistoryServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -24,10 +23,6 @@ class PasswordHistoryServiceProvider extends ServiceProvider
                     __DIR__ . "/../database/migrations/{$migrationFileName}.stub" => database_path('migrations/' . date('Y_m_d_His', time()) . '_' . $migrationFileName),
                 ], 'migrations');
             }
-
-            $this->commands([
-                PasswordHistoryCommand::class,
-            ]);
         }
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'password-history');

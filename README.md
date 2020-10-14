@@ -107,6 +107,12 @@ validator(collect($model)->toArray(), [
 composer test
 ```
 
+## Psalming
+
+```bash
+./vendor/bin/psalm --show-info=true
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
