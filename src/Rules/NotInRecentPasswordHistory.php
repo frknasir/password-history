@@ -34,7 +34,7 @@ class NotInRecentPasswordHistory implements Rule {
             ->take($this->historyCheckLength)
             ->get();
 
-        //loop through and make sure none is the same with the 
+        //loop through and make sure none is the same with the
         //has of the will-be password
         $passwordCollection = collect($prevPasswords);
         

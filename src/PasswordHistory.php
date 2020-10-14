@@ -2,11 +2,12 @@
 
 namespace StarfolkSoftware\PasswordHistory;
 
-use Illuminate\Database\Eloquent\{Model};
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\{Model};
 use StarfolkSoftware\PasswordHistory\Contracts\PasswordHistory as PasswordHistoryContract;
 
-class PasswordHistory extends Model implements PasswordHistoryContract {
+class PasswordHistory extends Model implements PasswordHistoryContract
+{
     /**
      * The table associated with the model.
      *
@@ -16,7 +17,8 @@ class PasswordHistory extends Model implements PasswordHistoryContract {
 
     protected $fillable = ['user_id','password', 'guard'];
 
-    public function owner(): BelongsTo {
+    public function owner(): BelongsTo
+    {
         return $this->belongsTo($this->getAuthModelName(), 'user_id');
     }
 
@@ -31,7 +33,7 @@ class PasswordHistory extends Model implements PasswordHistoryContract {
             return config('password_history.user_model');
         }
 
-        if (!is_null(config('auth.providers.users.model'))) {
+        if (! is_null(config('auth.providers.users.model'))) {
             return config('auth.providers.users.model');
         }
 
