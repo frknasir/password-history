@@ -1,5 +1,5 @@
 {
-    "name": "StarfolkSoftware/password-history",
+    "name": "starfolksoftware/password-history",
     "description": "Add password history to your laravel applications",
     "keywords": [
         "StarfolkSoftware",
@@ -11,8 +11,8 @@
         {
             "name": "Faruk Nasir",
             "email": "faruk@StarfolkSoftware.com",
-            "homepage": "https://spatie.be",
-            "role": "Developer"
+            "homepage": "https://starfolksoftware.com",
+            "role": "Co-founder & CEO"
         }
     ],
     "require": {
