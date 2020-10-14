@@ -2,10 +2,8 @@
 
 namespace StarfolkSoftware\PasswordHistory\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use StarfolkSoftware\PasswordHistory\PasswordHistoryServiceProvider;
-use Illuminate\Database\Schema\Blueprint;
 
 class TestCase extends Orchestra
 {
@@ -40,7 +38,8 @@ class TestCase extends Orchestra
         */
     }
 
-    protected function setUpDatabase() {
+    protected function setUpDatabase()
+    {
         include_once __DIR__ . '/../database/migrations/create_password_histories_table.php.stub';
         
         (new \CreatePasswordHistoriesTable())->up();

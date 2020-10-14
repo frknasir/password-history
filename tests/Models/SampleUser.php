@@ -4,7 +4,8 @@ namespace StarfolkSoftware\PasswordHistory\Tests\Models;
 use Illuminate\Foundation\Auth\User;
 use StarfolkSoftware\PasswordHistory\Traits\HasPasswordHistory;
 
-class SampleUser extends User {
+class SampleUser extends User
+{
     use HasPasswordHistory;
     
     protected $table = 'users';
@@ -12,6 +13,6 @@ class SampleUser extends User {
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
     ];
 }
