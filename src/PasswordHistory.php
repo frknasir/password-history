@@ -2,7 +2,8 @@
 
 namespace StarfolkSoftware\PasswordHistory;
 
-use Illuminate\Database\Eloquent\Relations\{BelongsTo, MorphTo};
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\{Model};
 use StarfolkSoftware\PasswordHistory\Contracts\PasswordHistory as PasswordHistoryContract;
 
@@ -17,7 +18,8 @@ class PasswordHistory extends Model implements PasswordHistoryContract
 
     protected $guarded = [];
 
-    public function passwordhistorable(): MorphTo {
+    public function passwordhistorable(): MorphTo
+    {
         return $this->morphTo();
     }
 

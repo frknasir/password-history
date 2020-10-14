@@ -4,7 +4,6 @@ namespace StarfolkSoftware\PasswordHistory\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\{MorphMany};
-use StarfolkSoftware\PasswordHistory\PasswordHistory;
 
 trait HasPasswordHistory
 {
@@ -15,7 +14,8 @@ trait HasPasswordHistory
         });
     }
 
-    public function previousPasswords(): MorphMany {
+    public function previousPasswords(): MorphMany
+    {
         return $this->morphMany(config('password_history.password_history_class'), 'passwordHistorable');
     }
 
@@ -44,7 +44,7 @@ trait HasPasswordHistory
             'passwordhistorable_id' => $this->getKey(),
             'passwordhistorable_type' => get_class(),
             'user_id' => is_null($user) ? null : $user->getKey(),
-            'password' => $password
+            'password' => $password,
         ]);
 
         return $this->previousPasswords()->save($passwordHistory);
