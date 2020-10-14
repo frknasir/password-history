@@ -11,4 +11,10 @@ return [
      * {{ password_history_check_length }} recent passwords
      */
     'password_history_check_length' => env('PASSWORD_HISTORY_CHECK_LENGTH', 5),
+
+    /*
+    * The user model that should be used. If null, the default user provider from your
+    * Laravel authentication configuration will be used.
+    */
+    'user_model' => \Illuminate\Foundation\Auth\User::class,
 ];
