@@ -44,5 +44,13 @@ class TestCase extends Orchestra
         include_once __DIR__ . '/../database/migrations/create_password_histories_table.php.stub';
         
         (new \CreatePasswordHistoriesTable())->up();
+
+        $this->app['db']->connection()->getSchemaBuilder()->create('admin_users', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->timestamps();
+        });
     }
 }
