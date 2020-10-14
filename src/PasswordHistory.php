@@ -2,17 +2,19 @@
 
 namespace StarfolkSoftware\PasswordHistory;
 
+use Exception;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\{Model};
 use StarfolkSoftware\PasswordHistory\Contracts\PasswordHistory as PasswordHistoryContract;
-use Exception;
 
 class PasswordHistory extends Model implements PasswordHistoryContract
 {
-    public function __construct() {
+    public function __construct()
+    {
         $this->dateFormat = "YYYY-MM-DD";
     }
+
     /**
      * The table associated with the model.
      *

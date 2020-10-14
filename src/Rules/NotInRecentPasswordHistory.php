@@ -3,8 +3,8 @@
 namespace StarfolkSoftware\PasswordHistory\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class NotInRecentPasswordHistory implements Rule
 {
