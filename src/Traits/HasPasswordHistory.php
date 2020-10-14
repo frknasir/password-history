@@ -6,8 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\{MorphMany};
 use StarfolkSoftware\PasswordHistory\PasswordHistory;
 
-trait HasPasswordHistory {
-    public static function bootHasPasswordHistory() {
+trait HasPasswordHistory
+{
+    public static function bootHasPasswordHistory()
+    {
         static::saved(function ($model) {
             $model->writePasswordHistory($model->password);
         });

@@ -2,10 +2,14 @@
 
 namespace StarfolkSoftware\PasswordHistory\Tests;
 
+<<<<<<< HEAD
 use StarfolkSoftware\PasswordHistory\Tests\Models\{SampleUser, AdminUser};
+=======
+use Illuminate\Support\Facades\Hash;
+>>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
 use StarfolkSoftware\PasswordHistory\PasswordHistory;
 use StarfolkSoftware\PasswordHistory\Rules\NotInRecentPasswordHistory;
-use Illuminate\Support\Facades\Hash;
+use StarfolkSoftware\PasswordHistory\Tests\Models\SampleUser;
 
 class PasswordHistoryTest extends TestCase
 {
@@ -52,12 +56,18 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
-    public function user_has_password_histories() {
+    public function user_has_password_histories()
+    {
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
+<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
+=======
+            'email' => 'frknasir@yahoo.com',
+            'password' => Hash::make('password'),
+>>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $this->assertSame(
@@ -76,6 +86,7 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
+<<<<<<< HEAD
     public function password_history_has_historian() {
         $user = SampleUser::create([
             'id' => 1,
@@ -102,6 +113,15 @@ class PasswordHistoryTest extends TestCase
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
+=======
+    public function password_history_has_owner()
+    {
+        $user = SampleUser::create([
+            'id' => 1,
+            'name' => 'Faruk Nasir',
+            'email' => 'frknasir@yahoo.com',
+            'password' => Hash::make('password'),
+>>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $passwordHistory = PasswordHistory::find(1);
@@ -111,15 +131,21 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
-    public function user_can_not_change_password_to_a_recently_used_password() {
+    public function user_can_not_change_password_to_a_recently_used_password()
+    {
         $this->expectException(\Illuminate\Validation\ValidationException::class);
         $this->expectErrorMessage('The given data was invalid.');
 
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
+<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
+=======
+            'email' => 'frknasir@yahoo.com',
+            'password' => Hash::make('password'),
+>>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $user = SampleUser::find(1);
@@ -127,20 +153,26 @@ class PasswordHistoryTest extends TestCase
 
         try {
             validator(collect($user)->toArray(), [
-                'password' => NotInRecentPasswordHistory::ofUser($user)
+                'password' => NotInRecentPasswordHistory::ofUser($user),
             ])->validate();
-        } catch(\Illuminate\Validation\ValidationException $e) {
+        } catch (\Illuminate\Validation\ValidationException $e) {
             throw $e;
         }
     }
 
     /** @test */
-    public function user_can_change_password_to_a_previously_used_password_that_escapes_the_check_length() {
+    public function user_can_change_password_to_a_previously_used_password_that_escapes_the_check_length()
+    {
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
+<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password1')
+=======
+            'email' => 'frknasir@yahoo.com',
+            'password' => Hash::make('password1'),
+>>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $user = SampleUser::find(1);
@@ -169,9 +201,9 @@ class PasswordHistoryTest extends TestCase
 
         try {
             validator(collect($user)->toArray(), [
-                'password' => NotInRecentPasswordHistory::ofUser($user)
+                'password' => NotInRecentPasswordHistory::ofUser($user),
             ])->validate();
-        } catch(\Illuminate\Validation\ValidationException $e) {
+        } catch (\Illuminate\Validation\ValidationException $e) {
             throw $e;
         }
 

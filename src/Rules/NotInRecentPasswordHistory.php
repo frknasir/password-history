@@ -5,16 +5,19 @@ namespace StarfolkSoftware\PasswordHistory\Rules;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
 
-class NotInRecentPasswordHistory implements Rule {
+class NotInRecentPasswordHistory implements Rule
+{
     protected $model;
     protected $historyCheckLength;
 
-    public function __construct($model) {
+    public function __construct($model)
+    {
         $this->model = $model;
         $this->historyCheckLength = config('password_history.password_history_check_length');
     }
 
-    public static function ofUser($model) {
+    public static function ofUser($model)
+    {
         return new static($model);
     }
 
@@ -38,7 +41,7 @@ class NotInRecentPasswordHistory implements Rule {
         //has of the will-be password
         $passwordCollection = collect($prevPasswords);
         
-        return !($passwordCollection->contains(function ($val, $key) use ($value) {
+        return ! ($passwordCollection->contains(function ($val, $key) use ($value) {
             return Hash::check($value, $val['password']);
         }));
     }
