@@ -2,7 +2,8 @@
 
 namespace StarfolkSoftware\PasswordHistory\Contracts;
 
-use Illuminate\Database\Eloquent\Relations\{MorphTo, BelongsTo};
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 interface PasswordHistory
 {

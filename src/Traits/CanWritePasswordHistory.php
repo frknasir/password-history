@@ -2,6 +2,6 @@
 
 namespace StarfolkSoftware\PasswordHistory\Traits;
 
-trait CanWritePasswordHistory {
-
+trait CanWritePasswordHistory
+{
 }

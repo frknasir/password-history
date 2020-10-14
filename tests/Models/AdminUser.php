@@ -1,10 +1,11 @@
 <?php
 namespace StarfolkSoftware\PasswordHistory\Tests\Models;
 
-use StarfolkSoftware\PasswordHistory\Traits\HasPasswordHistory;
 use Illuminate\Database\Eloquent\Model;
+use StarfolkSoftware\PasswordHistory\Traits\HasPasswordHistory;
 
-class AdminUser extends Model {
+class AdminUser extends Model
+{
     use HasPasswordHistory;
     
     protected $table = 'admin_users';
@@ -12,6 +13,6 @@ class AdminUser extends Model {
     protected $fillable = [
         'name',
         'email',
-        'password'
+        'password',
     ];
 }

@@ -2,6 +2,6 @@
 
 namespace StarfolkSoftware\PasswordHistory\Contracts;
 
-interface PasswordHistorian {
-
+interface PasswordHistorian
+{
 }
