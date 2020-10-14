@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace Starfolksoftware\PasswordHistory\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PasswordHistoryCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'password-history';
 
     public $description = 'My command';
 

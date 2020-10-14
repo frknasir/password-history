@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Starfolksoftware\PasswordHistory\Tests;
 
 class ExampleTest extends TestCase
 {
