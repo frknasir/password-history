@@ -2,6 +2,7 @@
 
 namespace StarfolkSoftware\PasswordHistory\Tests;
 
+use Illuminate\Database\Schema\Blueprint;
 use Orchestra\Testbench\TestCase as Orchestra;
 use StarfolkSoftware\PasswordHistory\PasswordHistoryServiceProvider;
 

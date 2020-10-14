@@ -2,14 +2,10 @@
 
 namespace StarfolkSoftware\PasswordHistory\Tests;
 
-<<<<<<< HEAD
 use StarfolkSoftware\PasswordHistory\Tests\Models\{SampleUser, AdminUser};
-=======
-use Illuminate\Support\Facades\Hash;
->>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
 use StarfolkSoftware\PasswordHistory\PasswordHistory;
 use StarfolkSoftware\PasswordHistory\Rules\NotInRecentPasswordHistory;
-use StarfolkSoftware\PasswordHistory\Tests\Models\SampleUser;
+use Illuminate\Support\Facades\Hash;
 
 class PasswordHistoryTest extends TestCase
 {
@@ -61,13 +57,8 @@ class PasswordHistoryTest extends TestCase
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
-<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
-=======
-            'email' => 'frknasir@yahoo.com',
-            'password' => Hash::make('password'),
->>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $this->assertSame(
@@ -86,7 +77,6 @@ class PasswordHistoryTest extends TestCase
     }
 
     /** @test */
-<<<<<<< HEAD
     public function password_history_has_historian() {
         $user = SampleUser::create([
             'id' => 1,
@@ -113,15 +103,6 @@ class PasswordHistoryTest extends TestCase
             'name' => 'Faruk Nasir',
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
-=======
-    public function password_history_has_owner()
-    {
-        $user = SampleUser::create([
-            'id' => 1,
-            'name' => 'Faruk Nasir',
-            'email' => 'frknasir@yahoo.com',
-            'password' => Hash::make('password'),
->>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $passwordHistory = PasswordHistory::find(1);
@@ -139,13 +120,8 @@ class PasswordHistoryTest extends TestCase
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
-<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password')
-=======
-            'email' => 'frknasir@yahoo.com',
-            'password' => Hash::make('password'),
->>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $user = SampleUser::find(1);
@@ -166,13 +142,8 @@ class PasswordHistoryTest extends TestCase
         $user = SampleUser::create([
             'id' => 1,
             'name' => 'Faruk Nasir',
-<<<<<<< HEAD
             'email' => 'frknasir@example.com',
             'password' => Hash::make('password1')
-=======
-            'email' => 'frknasir@yahoo.com',
-            'password' => Hash::make('password1'),
->>>>>>> 91a0cacf4dd52bfad827ef7827d63b2e6c52569d
         ]);
 
         $user = SampleUser::find(1);
