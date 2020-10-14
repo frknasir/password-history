@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Relations\{BelongsTo};
 
 interface PasswordHistory
 {
-  public function owner(): BelongsTo;
+    public function owner(): BelongsTo;
 }
