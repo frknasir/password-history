@@ -1,8 +1,8 @@
 # Add password history to your laravel applications
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/StarfolkSoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/StarfolkSoftware/password-history)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/StarfolkSoftware/password-history/run-tests?label=tests)](https://github.com/StarfolkSoftware/password-history/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/StarfolkSoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/StarfolkSoftware/password-history)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/starfolksoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/starfolksoftware/password-history)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/starfolksoftware/password-history/run-tests?label=tests)](https://github.com/starfolksoftware/password-history/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/starfolksoftware/password-history.svg?style=flat-square)](https://packagist.org/packages/starfolksoftware/password-history)
 
 
 Add password history to your laravel applications
@@ -12,7 +12,7 @@ Add password history to your laravel applications
 You can install the package via composer:
 
 ```bash
-composer require StarfolkSoftware/password-history
+composer require starfolksoftware/password-history
 ```
 
 You can publish and run the migrations with:
