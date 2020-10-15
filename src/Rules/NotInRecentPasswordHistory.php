@@ -42,8 +42,8 @@ class NotInRecentPasswordHistory implements Rule
         //has of the will-be password
         $passwordCollection = collect($prevPasswords);
         
-        return ! ($passwordCollection->contains(function (array $val) use ($value): bool {
-            return Hash::check($value, $val['password']);
+        return ! ($passwordCollection->contains(function (object $val) use ($value): bool {
+            return Hash::check($value, $val->password);
         }));
     }
 

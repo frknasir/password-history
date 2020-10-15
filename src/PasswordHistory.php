@@ -10,11 +10,6 @@ use StarfolkSoftware\PasswordHistory\Contracts\PasswordHistory as PasswordHistor
 
 class PasswordHistory extends Model implements PasswordHistoryContract
 {
-    public function __construct()
-    {
-        $this->dateFormat = "YYYY-MM-DD";
-    }
-
     /**
      * The table associated with the model.
      *
@@ -23,6 +18,8 @@ class PasswordHistory extends Model implements PasswordHistoryContract
     protected $table = 'password_histories';
 
     protected $guarded = [];
+
+    protected $dateFormat = "Y-m-d H:i:s";
 
     public function passwordhistorable(): MorphTo
     {
